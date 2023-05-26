@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial scale=1.0">
+    <title>
+        Coding Week Task-01
+    </title>
+</head>
+<body>
+    <div> <!-- Div tag is used to target specific sections so that we can xustomize them easily-->
+        <div class="header1"> Leaderboard </div>
+        <div class = "flex-container1">
+                <div class="l1"><p> 2 </p></div>
+                <div class="l2"><p> 1 </p></div>
+                <div class="l1"><p> 3 </p></div>
+        </div>
+        <div class="flex-container2">
+                <div class="m1"></div>
+                <div class="m2"></div>
+                <div class="m1"></div>
+        </div>
+        <div class="flex-container3">
+                <div class="n1"><p>Jeremy - 672</p></div>
+                <div class="n2"><p>Amanda - 764</p></div>
+                <div class="n1"><p>Jefferey - 542</p></div>
+        </div>
+
+    </div>
+    <div class="Contestants">
+        <div class="contestant" style="margin: top 13px;">
+            <div class="c1">4</div>
+            <div class="c2"></div>
+            <div class="c3">Joe</div>
+            <div class="c4">445</div>
+        </div>
+        <div class="contestant">
+            <div class="c1">5</div>
+            <div class="c2"></div>
+            <div class="c3">Jenny</div>
+            <div class="c4">438</div>
+        </div>
+        <div class="contestant">
+            <div class="c1">6</div>
+            <div class="c2"></div>
+            <div class="c3">Josh</div>
+            <div class="c4">432</div>
+        </div>
+        <div class="contestant">
+            <div class="c1">7</div>
+            <div class="c2"></div>
+            <div class="c3">Stella</div>
+            <div class="c4">321</div>
+        </div>
+        <div class="contestant">
+            <div class="c1">8</div>
+            <div class="c2"></div>
+            <div class="c3">Sally</div>
+            <div class="c4">300</div>
+        </div>
+    </div>
+    <script>
+        fetch('https://www.coursehubiitg.in/api/codingweek/contributions')
+        .then(res=>{
+            return res.json();
+        })
+        .then(data=>(d1,d2)=>{
+            return d2.points-d1.points;
+        })
+        console.log(data);
+        </script>
+</body>
+</html>
